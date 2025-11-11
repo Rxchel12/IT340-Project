@@ -1,0 +1,19 @@
+/* Apply the global background image */
+.full-page-background {
+    /* Path to background.jpg in src/app/assets/ */
+    background-image: url('assets/background.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Ensures it looks good on scroll */
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ensure body and html height are set for full coverage */
+:host {
+    display: block;
+    height: 100%;
+}

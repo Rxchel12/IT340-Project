@@ -1,0 +1,141 @@
+/* Main container for the login content (flex direction aligns items vertically) */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    max-width: 95%; /* Allow it to take up more of the screen */
+    width: 700px; /* INCREASED WIDTH to 700px */
+    margin: auto;
+}
+
+/* ------------------ */
+/* Header styling (now inside the white box) */
+/* ------------------ */
+.title-header {
+    /* Increased top margin to push the title down inside the box */
+    margin-top: 20px; 
+    margin-bottom: 20px; /* Increased space below title */
+    color: black; 
+    text-shadow: none;
+}
+
+.title-header h1 {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 2.5rem; /* Slightly larger title text */
+    line-height: 1.1;
+    margin: 0;
+    color: #b700ff; 
+    font-weight: 900;
+}
+
+/* ------------------ */
+/* LOGIN BOX STYLING (The part with the form) */
+/* ------------------ */
+.login-box {
+    background-color: rgb(255, 255, 255);
+    /* MODIFIED PADDING: 80px Top/Bottom, 40px Left/Right */
+    padding: 80px 40px; 
+    border-radius: 4px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    border: 3px solid black;
+    width: 100%; 
+}
+
+.login-box h2 {
+    font-family: Arial, sans-serif; 
+    font-size: 2.2rem; /* Slightly larger LOGIN heading */
+    margin-bottom: 30px; /* More space below LOGIN */
+    color: black;
+    font-weight: bold;
+    margin-top: 0; 
+}
+
+.login-form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 18px; /* More space between inputs */
+    margin-bottom: 30px;
+}
+
+/* Input styling */
+input[type="email"],
+input[type="password"] {
+    padding: 16px; /* Larger input padding */
+    border: 1px solid #ccc;
+    border-radius: 0;
+    font-size: 1.2rem; /* Larger input text */
+    box-shadow: none;
+    outline: none;
+    transition: border-color 0.1s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #001aff; 
+    box-shadow: 0 0 5px #001aff;
+}
+
+/* Button styling */
+.sign-in-button,
+.create-account-button {
+    width: 100%;
+    padding: 16px; /* Larger button padding */
+    border: none;
+    border-radius: 0;
+    font-size: 1.2rem; /* Larger button text */
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.1s;
+    font-weight: bold;
+}
+
+.sign-in-button {
+    background-color: black; 
+    color: white;
+    box-shadow: 0 0 0 2px #001aff inset 0 0 0 2px #001aff;
+    margin-bottom: 12px;
+}
+
+.sign-in-button:hover {
+    background-color: #333;
+}
+
+.create-account-button {
+    background-color: #b700ff;
+    color: black;
+    box-shadow: none;
+    border: 2px solid black;
+}
+
+.create-account-button:hover {
+    background-color: #b700ff;
+}
+
+/* Options */
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem; /* Larger options text */
+    margin-top: 30px; /* More space above options */
+    margin-bottom: 0; 
+}
+
+.checkbox-text {
+    margin-left: 5px;
+}
+
+.forgot-link {
+    color: #001aff; 
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
