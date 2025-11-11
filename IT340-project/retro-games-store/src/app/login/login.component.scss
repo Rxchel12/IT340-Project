@@ -26,7 +26,8 @@
     font-size: 2.5rem; /* Slightly larger title text */
     line-height: 1.1;
     margin: 0;
-    color: #b700ff; 
+    /* Neon Color Update: Hot Pink/Magenta */
+    color: #FF3366; 
     font-weight: 900;
 }
 
@@ -75,8 +76,9 @@ input[type="password"] {
 
 input[type="email"]:focus,
 input[type="password"]:focus {
-    border-color: #001aff; 
-    box-shadow: 0 0 5px #001aff;
+    /* Neon Color Update: Vibrant Cyan */
+    border-color: #00FFFF; 
+    box-shadow: 0 0 5px #00FFFF;
 }
 
 /* Button styling */
@@ -95,25 +97,30 @@ input[type="password"]:focus {
 }
 
 .sign-in-button {
-    background-color: black; 
-    color: white;
-    box-shadow: 0 0 0 2px #001aff inset 0 0 0 2px #001aff;
+    /* Neon Color Update: Vibrant Cyan */
+    background-color: #00FFFF; 
+    color: black;
+    /* Keeping the original box-shadow structure but with Cyan color */
+    box-shadow: 0 0 0 2px black inset, 0 0 0 2px black;
     margin-bottom: 12px;
 }
 
 .sign-in-button:hover {
-    background-color: #333;
+    /* Slightly darker cyan on hover */
+    background-color: #00DDEE; 
 }
 
 .create-account-button {
-    background-color: #b700ff;
+    /* Neon Color Update: Bright Gold/Yellow */
+    background-color: #FFD700;
     color: black;
     box-shadow: none;
     border: 2px solid black;
 }
 
 .create-account-button:hover {
-    background-color: #b700ff;
+    /* Keeping the Gold/Yellow color on hover */
+    background-color: #EEDD00;
 }
 
 /* Options */
@@ -131,7 +138,8 @@ input[type="password"]:focus {
 }
 
 .forgot-link {
-    color: #001aff; 
+    /* Neon Color Update: Hot Pink/Magenta */
+    color: #FF3366; 
     text-decoration: none;
     font-weight: normal;
 }
