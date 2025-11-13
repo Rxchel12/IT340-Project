@@ -1,0 +1,154 @@
+.home-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1.5rem;
+  color: #fdfbff;
+}
+
+.home-overlay {
+  width: 100%;
+  max-width: 1100px;
+  border-radius: 28px;
+  padding: 2.8rem 2.5rem 2.2rem;
+  background: linear-gradient(
+    145deg,
+    rgba(8, 8, 20, 0.95),
+    rgba(45, 9, 78, 0.9)
+  );
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+/* HERO */
+
+.hero-card {
+  text-align: center;
+}
+
+.eyebrow {
+  font-size: 0.8rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.hero-card h1 {
+  margin-top: 0.4rem;
+  font-size: 3rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.tagline {
+  margin-top: 0.85rem;
+  font-size: 1rem;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.9;
+}
+
+.hero-buttons {
+  margin-top: 1.7rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.9rem;
+}
+
+/* BUTTON STYLES */
+
+.btn-primary,
+.btn-ghost,
+.btn-outline {
+  padding: 0.7rem 1.6rem;
+  border-radius: 999px;
+  border: none;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease,
+    background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #ff6ac1, #ffc46b);
+  color: #150814;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.85);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.9);
+}
+
+.btn-ghost {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fdfbff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #ffb6ff;
+  border: 1px solid rgba(255, 182, 255, 0.8);
+}
+
+.btn-outline:hover {
+  background: rgba(255, 182, 255, 0.16);
+}
+
+/* FEATURES */
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.4rem;
+}
+
+.feature {
+  padding: 1.2rem 1.1rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.7);
+  text-align: left;
+}
+
+.feature h3 {
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.feature p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+  .home-overlay {
+    padding: 2.1rem 1.6rem 1.8rem;
+  }
+
+  .hero-card h1 {
+    font-size: 2.3rem;
+    letter-spacing: 0.12em;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
+

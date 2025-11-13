@@ -1,0 +1,157 @@
+.consoles-page {
+  min-height: 100vh;
+  padding: 3rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fdfbff;
+}
+
+.consoles-wrapper {
+  width: 100%;
+  max-width: 1100px;
+  padding: 2.5rem 2.75rem;
+  border-radius: 24px;
+  background: linear-gradient(
+    135deg,
+    rgba(8, 8, 20, 0.90),
+    rgba(34, 7, 60, 0.88)
+  );
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+/* HEADER */
+
+.consoles-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.title-block h1 {
+  font-size: 2.4rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin: 0.25rem 0;
+}
+
+.eyebrow {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  opacity: 0.75;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.consoles-nav {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.nav-btn {
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  background: rgba(8, 8, 20, 0.7);
+  color: #fdfbff;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-btn:hover {
+  background: #ff6ac1;
+  border-color: #ffb6ff;
+  transform: translateY(-1px);
+}
+
+/* GRID & CARDS */
+
+.consoles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem;
+}
+
+.console-card {
+  padding: 1.5rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  transition: transform 0.18s ease, box-shadow 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.console-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.8);
+  border-color: rgba(255, 182, 255, 0.8);
+}
+
+.console-name {
+  font-size: 1.3rem;
+  margin-bottom: 0.15rem;
+}
+
+.console-brand {
+  font-size: 0.85rem;
+  opacity: 0.85;
+  margin-bottom: 0.5rem;
+}
+
+.console-desc {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  opacity: 0.9;
+  margin-bottom: 0.75rem;
+}
+
+.console-price {
+  font-weight: 700;
+  margin-bottom: 0.9rem;
+}
+
+/* BUTTON */
+
+.btn-primary {
+  padding: 0.55rem 1.2rem;
+  border-radius: 999px;
+  border: none;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ff6ac1, #ffc46b);
+  color: #150814;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.65);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.85);
+}
+
+/* SMALL SCREENS */
+
+@media (max-width: 700px) {
+  .consoles-wrapper {
+    padding: 1.75rem 1.5rem;
+  }
+
+  .consoles-header {
+    align-items: flex-start;
+  }
+}

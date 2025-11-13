@@ -1,0 +1,89 @@
+<div class="consoles-page">
+  <div class="consoles-wrapper">
+    <!-- HEADER -->
+    <header class="consoles-header">
+      <div class="title-block">
+        <p class="eyebrow">Retro Games Store</p>
+        <h1>Consoles</h1>
+        <p class="subtitle">
+          Classic systems, pixel nostalgia, and 8-bit vibes.
+        </p>
+      </div>
+
+      <nav class="consoles-nav">
+        <button class="nav-btn" routerLink="/home">Home</button>
+        <button class="nav-btn" routerLink="/cart">Cart</button>
+      </nav>
+    </header>
+
+    <!-- CONSOLES GRID -->
+    <section class="consoles-grid">
+      <!-- NES -->
+      <article class="console-card">
+        <h2 class="console-name">NES</h2>
+        <p class="console-brand">Nintendo • 8-bit classic</p>
+        <p class="console-desc">
+          The original home of Mario, Zelda &amp; Metroid. Pure nostalgia.
+        </p>
+        <p class="console-price">$99</p>
+        <button
+          class="btn-primary"
+          (click)="addToCart('NES', 99, 'Nintendo', '8-bit classic console.')"
+        >
+          Add to Cart
+        </button>
+      </article>
+
+      <!-- SNES -->
+      <article class="console-card">
+        <h2 class="console-name">SNES</h2>
+        <p class="console-brand">Nintendo • 16-bit legend</p>
+        <p class="console-desc">
+          Iconic RPGs, bright colors, and smooth 16-bit soundtracks.
+        </p>
+        <p class="console-price">$129</p>
+        <button
+          class="btn-primary"
+          (click)="addToCart('SNES', 129, 'Nintendo', '16-bit legend console.')"
+        >
+          Add to Cart
+        </button>
+      </article>
+
+      <!-- Sega Genesis -->
+      <article class="console-card">
+        <h2 class="console-name">Sega Genesis</h2>
+        <p class="console-brand">Sega • Blast processing vibes</p>
+        <p class="console-desc">
+          Fast-paced arcade action with Sonic and friends.
+        </p>
+        <p class="console-price">$119</p>
+        <button
+          class="btn-primary"
+          (click)="addToCart('Sega Genesis', 119, 'Sega', 'Classic 16-bit Sega console.')"
+        >
+          Add to Cart
+        </button>
+      </article>
+
+      <!-- Add more consoles here if you want -->
+      <!--
+      <article class="console-card">
+        <h2 class="console-name">PlayStation</h2>
+        <p class="console-brand">Sony • 32-bit era</p>
+        <p class="console-desc">
+          3D gaming revolution with iconic JRPGs and action games.
+        </p>
+        <p class="console-price">$149</p>
+        <button
+          class="btn-primary"
+          (click)="addToCart('PlayStation', 149, 'Sony', 'Classic 32-bit PlayStation console.')"
+        >
+          Add to Cart
+        </button>
+      </article>
+      -->
+    </section>
+  </div>
+</div>
+

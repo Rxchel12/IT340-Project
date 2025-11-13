@@ -4,12 +4,8 @@ import { RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet], 
-  
-  // References the correctly renamed component files
-  templateUrl: './app.component.html', 
+  imports: [RouterOutlet],
+  templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
-  title = 'Retro Games & Consoles Store';
-}
+export class AppComponent {}

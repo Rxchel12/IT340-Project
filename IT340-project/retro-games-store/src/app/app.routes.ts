@@ -1,24 +1,38 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
-    // The default path ('') loads the LoginComponent
-    { 
-        path: '', 
-        loadComponent: () => import('./login/login.component')
-                             .then(m => m.LoginComponent)
-    },
-    // Route for the registration page
-    { 
-        path: 'register', 
-        loadComponent: () => import('./register/register.component')
-                             .then(m => m.RegisterComponent)
-    },
-    // NEW: Route for the main home page
-    { 
-        path: 'home', 
-        loadComponent: () => import('./home/home.component')
-                             .then(m => m.HomeComponent)
-    },
-    // Fallback route
-    { path: '**', redirectTo: '' }
+  { 
+    path: '', 
+    loadComponent: () =>
+      import('./login/login.component').then(m => m.LoginComponent)
+  },
+  { 
+    path: 'register', 
+    loadComponent: () =>
+      import('./register/register.component').then(m => m.RegisterComponent)
+  },
+  { 
+    path: 'home', 
+    loadComponent: () =>
+      import('./home/home.component').then(m => m.HomeComponent)
+  },
+  {
+    path: 'forgot-password',
+    loadComponent: () =>
+      import('./forgot-password/forgot-password.component')
+        .then(m => m.ForgotPasswordComponent)
+  },
+  {
+    path: 'consoles',
+    loadComponent: () =>
+      import('./consoles/consoles.component')
+        .then(m => m.ConsolesComponent)
+  },
+  {
+  path: 'cart',
+  loadComponent: () =>
+    import('./cart/cart.component').then(m => m.CartComponent)
+},
+
+  { path: '**', redirectTo: '' }
 ];

@@ -1,49 +1,55 @@
-<div class="login-container">
-    
-    <!-- Login Form -->
-    <div class="login-box">
-        
-        <!-- TITLE MOVED INSIDE THE WHITE BOX -->
-        <header class="title-header">
-            <h1>RETRO GAMES</h1>
-            <h1>& CONSOLES</h1>
-        </header>
+<div class="login-container"> 
+  <!-- Login Form -->
+  <div class="login-box">
+    <header class="title-header">
+      <h1>RETRO GAMES</h1>
+      <h1>&amp; CONSOLES</h1>
+    </header>
 
-        <h2>LOGIN</h2>
-        
-        <div class="login-form-container">
-            <!-- Input for EMAIL -->
-            <input 
-              type="email" 
-              placeholder="EMAIL" 
-              required
-              [ngModel]="email()"
-              (ngModelChange)="email.set($event)"
-              name="email"
-            >
-            <!-- Input for PASSWORD -->
-            <input 
-              type="password" 
-              placeholder="PASSWORD" 
-              required
-              [ngModel]="password()"
-              (ngModelChange)="password.set($event)"
-              name="password"
-            >
-            
-            <button type="button" class="sign-in-button" (click)="goToHome()">SIGN IN</button>
-        </div>
-        
-        <button class="create-account-button" (click)="goToRegister()">CREATE ACCOUNT</button>
-        
-        <!-- Options -->
-        <div class="login-options">
-            <label>
-                <input type="checkbox" id="rememberMe">
-                <span class="checkbox-text">REMEMBER ME</span>
-            </label>
-            
-            <a href="#" class="forgot-link">FORGOT PASSWORD?</a>
-        </div>
+    <h2>LOGIN</h2>
+    
+    <div class="login-form-container">
+      <!-- EMAIL -->
+      <input 
+        type="email" 
+        placeholder="EMAIL" 
+        required
+        [ngModel]="email()"
+        (ngModelChange)="email.set($event)"
+        name="email"
+      >
+
+      <!-- PASSWORD -->
+      <input 
+        type="password" 
+        placeholder="PASSWORD" 
+        required
+        [ngModel]="password()"
+        (ngModelChange)="password.set($event)"
+        name="password"
+      >
+      
+      <!-- IMPORTANT: type="button" so form doesn't submit/reload -->
+      <button type="button" class="sign-in-button" (click)="goToHome()">
+        SIGN IN
+      </button>
     </div>
+    
+    <button class="create-account-button" type="button" (click)="goToRegister()">
+      CREATE ACCOUNT
+    </button>
+    
+    <!-- Options -->
+    <div class="login-options">
+      <label>
+        <input type="checkbox" id="rememberMe">
+        <span class="checkbox-text">REMEMBER ME</span>
+      </label>
+      
+      <!-- Use (click) instead of href="#" to avoid full page reload -->
+      <button class="forgot-link" type="button" (click)="goToForgot()">
+        FORGOT PASSWORD?
+      </button>
+    </div>
+  </div>
 </div>

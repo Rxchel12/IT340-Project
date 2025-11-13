@@ -1,0 +1,65 @@
+<div class="cart-page">
+  <div class="cart-wrapper">
+    <header class="cart-header">
+      <div>
+        <p class="eyebrow">Retro Games Store</p>
+        <h1>Your Cart</h1>
+        <p class="subtitle">Review your consoles before checkout.</p>
+      </div>
+
+      <nav class="cart-nav">
+        <button class="nav-btn" routerLink="/consoles">Consoles</button>
+        <button class="nav-btn" routerLink="/home">Home</button>
+      </nav>
+    </header>
+
+    <!-- 🔹 CHANGED: items.length (no ()) -->
+    <section *ngIf="items.length > 0; else emptyCart">
+      <div class="cart-items">
+        <!-- 🔹 CHANGED: *ngFor="let item of items" (no ()) -->
+        <article class="cart-item" *ngFor="let item of items">
+          <div class="item-main">
+            <h2>{{ item.name }}</h2>
+            <p class="brand">{{ item.brand }}</p>
+            <p class="desc">{{ item.description }}</p>
+          </div>
+
+          <div class="item-side">
+            <p class="price">\${{ item.price }}</p>
+            <p class="qty">Qty: {{ item.quantity }}</p>
+            <button class="remove-btn" (click)="removeItem(item.name)">
+              Remove
+            </button>
+          </div>
+        </article>
+      </div>
+
+      <footer class="cart-footer">
+        <div class="total">
+          <span>Total:</span>
+          <span class="total-amount">
+            \${{ total() | number : '1.2-2' }}
+          </span>
+        </div>
+
+        <div class="footer-buttons">
+          <button class="checkout-btn">
+            Checkout (mock)
+          </button>
+          <button class="clear-btn" (click)="clearCart()">
+            Clear cart
+          </button>
+        </div>
+      </footer>
+    </section>
+
+    <ng-template #emptyCart>
+      <div class="empty-state">
+        <p>Your cart is empty.</p>
+        <button class="nav-btn" routerLink="/consoles">
+          Browse consoles
+        </button>
+      </div>
+    </ng-template>
+  </div>
+</div>
